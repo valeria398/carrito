@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Observaciones y Sugerencias</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 40px 60px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: left;
+        }
+
+        input[type="text"], textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #27ae60;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #27ae60;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enviar Observaciones y Sugerencias</h2>
+        <form id="feedbackForm" action="conexion.php" method="POST">
+            <label for="user">Usuario:</label>
+            <input type="text" id="user" name="user" required>
+
+            <label for="observations">Observaciones o Sugerencias:</label>
+            <textarea id="observations" name="observations" rows="5" placeholder="Escribe tus observaciones o sugerencias aquí..." required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="nav">
+            <a href="#" class="logo">Logo</a>
+            <a href="#" class="nav-link">Inicio</a>
+            <a href="#" class="nav-link">Productos</a>
+            <a href="#" class="nav-link">Contáctenos</a>
+        </div>
+    </div>
+</body>
+</html>
